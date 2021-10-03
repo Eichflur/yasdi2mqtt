@@ -1,4 +1,4 @@
-YASDI_PATH=yasdi
+YASDI_PATH=../yasdi
 DESTDIR=/usr/local/bin
 
 IDIRS=-I$(YASDI_PATH)/libs -I$(YASDI_PATH)/include -I$(YASDI_PATH)/core -I$(YASDI_PATH)/driver -I$(YASDI_PATH)/smalib -I$(YASDI_PATH)/master -I$(YASDI_PATH)/os
