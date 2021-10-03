@@ -57,6 +57,13 @@ bool yh_init(const char *ini_file, DWORD driver_id, DWORD device_count, unsigned
         log_fatal("Unable to set driver id %u online", driver);
         return false;
     }
+    
+    
+    if (yasdiMasterSetAccessLevel("sma","sma"))
+    {
+        log_fatal("Elevating rights to 'SMA' failed!");
+        return false;
+    }
 
     // Prepare for device detection
     active_devices = calloc(max_device_count, sizeof(DWORD));
